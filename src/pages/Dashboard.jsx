@@ -182,6 +182,15 @@ export default function Dashboard({ onLogout, dark = false, toggleTheme }) {
                         <Icon size={16} />{label}
                       </button>
                     ))}
+                    {/* Dark theme toggle */}
+                    <button onClick={() => { toggleTheme(); setMobileMenuOpen(false) }} style={{
+                      display: 'flex', alignItems: 'center', gap: 10, width: '100%',
+                      padding: '8px 12px', border: 'none', borderRadius: 8, cursor: 'pointer',
+                      background: 'transparent', color: colors.text,
+                      font: '400 14px/21px "Golos Text", sans-serif', textAlign: 'left'
+                    }}>
+                      <SunMoon size={16} />{dark ? 'Light theme' : 'Dark theme'}
+                    </button>
                     <div style={{ height: 1, background: colors.cardBorder, margin: '4px 0' }} />
 
                     {/* Log out */}
